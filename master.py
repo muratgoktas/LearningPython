@@ -120,3 +120,11 @@ print(f'Find output : {myFind}')
 # print(f'Index output : {myIndex}')
 
 
+
+def append(obje,myIndex,  self) -> str:
+   # obje =obje[:startIndex-1]+" "+self+" "+obje[startIndex:]
+    return  obje[:myIndex-1]+" "+self+" "+obje[len(self)+myIndex:]
+mcs = append(message,0,"Murat Göktaş derki :")
+print(message.strip("k"))
+s= s[:6]+'W'+s[7:]
+print(s.replace(" ","Murat"))
