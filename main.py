@@ -39,3 +39,5 @@ else:
     print(number1 ," Eşittir",number2)
 
 print("Yukarıdaki Tab boşluğuna indent denir")
+
+ #This extension is deprecated. Use the Azure Quantum Development Kit (QDK) extension instead.

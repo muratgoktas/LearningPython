@@ -10,7 +10,7 @@ print(result)
 searchWord = "Murat" in stringWord
 print(searchWord)
 
-message = 'Hello There. My name is Sadık Turan'.split()
+message = 'Hello There. My name is Murat GÖKTAŞ'.split()
 print(message)    # ['Hello', 'There.', 'My', 'name', 'is', 'Sadık', 'Turan']
 print(message[0]) # Hello
 names = ['Murat','Melike','Kayra']
@@ -48,8 +48,10 @@ age = 50
 
 print("Adı : {0}, Soyadı :{1}, Yaşım: {3}".format(firstName,lastName,birthDate,age))
 
+#yARDIMCI kAYNAK
 website = "http://www.sadikturan.com"
 course = "Python Kursu: Baştan Sona Python Programlama Rehberiniz (40 saat)"
+
 # 1- 'course' karakter dizisinde kaç karakter bulunmaktadır ?
 print(len(course))
 # 2- 'website' içinden www karakterlerini alın.
@@ -113,7 +115,7 @@ myIndex = message.index('bir',30,len(message))
 print(f'Index output : {myIndex}')
 myFind = message.find('bir',30,len(message))
 print(f'Find output : {myFind}')
-#**************** not found *****
+# **************** not found *****
 myFind = message.find('OlmayanVeri')
 print(f'Find output : {myFind}')
 # myIndex = message.index('OlmayanVeri')
@@ -128,3 +130,27 @@ mcs = append(message,0,"Murat Göktaş derki :")
 print(message.strip("k"))
 s= s[:6]+'W'+s[7:]
 print(s.replace(" ","Murat"))
+
+# **************************** Python Collections (Arrays)
+# Pythonda 4 farklı liste tipi vardır. Bunlar; List, Tuple, Set ve Dictionary veri tipleridir.
+
+# List, elemanları sıralanabilir, güncellenebilir ayrıca her bir eleman liste içerisinde birden fazla tekrarlanabilir.
+myList = [1,'Murat','Göktaş',23.3,'Murat',['a',25,[2,3]]]
+print(myList)
+print(len(myList))
+print(myList[5])
+print('1. Elemandan öncekiler :  ', myList[:2])
+for value in myList:
+    print(f'MyList Elemenı : {value}')
+myList = [1,2,3,4,5,6]
+print('Ters cevirir: ',myList[: : -1])
+myList =[['a','b','c'],['X','XI','XII'],[1,2,3]]
+print('1.Listenin 2. elemanı :',myList[1][2]) # Result = XII
+print(myList[1:2])
+
+# Tuple, elemanları sıralanabilir ancak güncellenemez ve her bir eleman liste içerisinde birden fazla tekrarlanabilir.
+
+
+# Set, elemanları sıralanamaz ve indekslenemez ayrıca her bir eleman liste içerisinde sadece bir tane olabilir.
+
+# Dictionary, key ve value şeklinde değer alırlar. Aynı key bilgisiyle birden fazla eleman olamaz.
