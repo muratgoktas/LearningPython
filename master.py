@@ -78,7 +78,7 @@ m='abc'
 m=m*3
 print(m)
 # split methodu
-message ="Murat, Melike, Kayra,ali , veli ,recep"
+message ="Murat, Melike, Kayra,Ali , Veli ,Recep"
 liste =message.split(",")
 print(message.split(","))
 print(liste[1])
@@ -130,6 +130,13 @@ mcs = append(message,0,"Murat Göktaş derki :")
 print(message.strip("k"))
 s= s[:6]+'W'+s[7:]
 print(s.replace(" ","Murat"))
+# *********************** memoryview
+x = memoryview(b"Hello")
+
+print(x)
+#return the Unicode of the first character
+print(x[0])
+print(chr(x[1]))
 
 # **************************** Python Collections (Arrays)
 # Pythonda 4 farklı liste tipi vardır. Bunlar; List, Tuple, Set ve Dictionary veri tipleridir.
@@ -147,7 +154,81 @@ print('Ters cevirir: ',myList[: : -1])
 myList =[['a','b','c'],['X','XI','XII'],[1,2,3]]
 print('1.Listenin 2. elemanı :',myList[1][2]) # Result = XII
 print(myList[1:2])
+# *********************************Liste Methodları 
+# --------append()- ekleme
+myList=['Ankara','Bursa','Kocaeli']
+print(myList) #Result = ['Ankara','Bursa','Kocaeli']
+myList.append("Zonguldak")
+print(myList) #Result = ['Ankara','Bursa','Kocaeli','Zonguldak']
+#Insert - ekle
+myList.insert(1,"Erzurum")
+print(myList) #Result = ['Ankara','Erzurum','Bursa','Kocaeli','Zonguldak']
+#remove('value')- değerle sil
+myList.remove('Bursa')
+print(myList) #Result = ['Ankara','Erzurum','Kocaeli','Zonguldak']
+#pop(index) -indexle sil
+myList.pop(3)
+print(myList) #Result = ['Ankara','Erzurum','Kocaeli']
+#pop() - sonuncu silinir
+myList.pop()
+print(myList) #Result = ['Ankara','Erzurum']
+#+ -ekle
+myList =myList+['Van','İstanbul','Hakkari','Diyarbakır','Kars','Giresun']
+print(myList)
+#del liste[index] -indexle siler
+del myList[4]
+print(myList) #Result = ['Ankara', 'Erzurum', 'Van', 'İstanbul', 'Diyarbakır', 'Kars', 'Giresun']
+#del liste - tüm listeyi siler
+del myList
+##print(myList) #Result =  # NameError: name 'list' is not defined
+#(+) ekle 
+myList=['Ankara', 'Erzurum', 'Van', 'İstanbul', 'Diyarbakır', 'Kars', 'Giresun']
+print(myList)
+#Liste Kopyalama -Referans Tiptir referans adresini kopyalar
+ListI =['a','b','c']
+print(ListI) #Result = ['a','b','c']
+ListII =[1,2,3]
+ListI =ListII 
+print(ListI) #Result = [1,2,3]
+ListI[1]='Updated'
+print(ListII) #Result = [1,'Updated',3]
 
+#.copy() - Referans tiplerde sadece valueları kopyalamakta kullanılır 
+aList = ["apple","banana"]
+bList = ["grape","cherry"]
+aList = bList.copy()
+bList[0] = "updated"
+print(aList, bList) #Result = ['grape','cherry'] ['updated','cherry']
+#.list() .copy() ile aynı işlevi görürür
+aList = ["apple","banana"]
+bList = ["grape","cherry"]
+aList = list(bList)
+bList[0] = "updated"
+print(aList, bList)   # çıktı: ['grape', 'cherry'] ['updated', 'cherry']
+
+#Liste elemanlarını sıralamak
+# .sort() sıralar str ve int ayrı liste olmalıdır.
+cList =['d','2','a','4','e','2']
+cList.sort()
+print(cList) #Result = ['2','2','4','a','d','e']
+#.reverse() dersine sıralar
+cList=[1,2,3,4,5,6]
+cList.reverse()
+print(cList) #Result = ['6','5','4','3','2','1']
+#Liste Min() Max()
+#Min() Max()
+cList=[1,2,34,5,64,89,7]
+print('Min : ',min(cList))
+print('Max : ',max(cList))
+cList=['Ali','Ahmet','Aydın','Asım','Alp','Adana','Adam','Ayhan','Alp','Alp']
+print(min(cList))
+print(max(cList))
+#.count() 
+print(cList.count('Alp')) #Result = 3
+#.clear
+print(cList)
+cList=cList.clear
+print(cList)
 # Tuple, elemanları sıralanabilir ancak güncellenemez ve her bir eleman liste içerisinde birden fazla tekrarlanabilir.
 
 
