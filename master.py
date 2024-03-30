@@ -139,9 +139,9 @@ print(x[0])
 print(chr(x[1]))
 
 # **************************** Python Collections (Arrays)
-# Pythonda 4 farklı liste tipi vardır. Bunlar; List, Tuple, Set ve Dictionary veri tipleridir.
+# Pythonda 4 farklı liste tipi vardır. Bunlar; List=[], Tuple=(), Set ve Dictionary veri tipleridir.
 
-# List, elemanları sıralanabilir, güncellenebilir ayrıca her bir eleman liste içerisinde birden fazla tekrarlanabilir.
+# List, elemanları sıralanabilir, köşeli parantez ile gösterilir [], güncellenebilir ayrıca her bir eleman liste içerisinde birden fazla tekrarlanabilir.
 myList = [1,'Murat','Göktaş',23.3,'Murat',['a',25,[2,3]]]
 print(myList)
 print(len(myList))
@@ -229,7 +229,24 @@ print(cList.count('Alp')) #Result = 3
 print(cList)
 cList=cList.clear
 print(cList)
-# Tuple, elemanları sıralanabilir ancak güncellenemez ve her bir eleman liste içerisinde birden fazla tekrarlanabilir.
+# Tuple,parantez ile gösterilir() elemanları sıralanabilir ancak güncellenemez ve her bir eleman liste içerisinde birden fazla tekrarlanabilir.
+# Pythonda tuple listeleri, list' e 
+# benzer ancak farkı tuple içindeki elemanlar değiştirilemez yani tuple listesine ekleme, silme ve güncelleme yapamayız.
+myTuple =('Kadın','Erkek',41,'Yaşlı','Genç')
+print(myTuple)
+# Listeye aktarılararak ekleme yapmak
+myList =list(myTuple)
+myList[2] ='Çocuk'
+myTuple =tuple(myList)
+print(myTuple)
+
+print(myTuple[0:1])
+print(myTuple[:1])
+print('(Count) Erkek elemanı var mı ? : ',myTuple.count('Erkek')) # Varsa 1 yoksa 0 
+print('Index kaçıncı sırada : ',myTuple.index('Yaşlı'))
+
+myList.reverse
+
 
 
 # Set, elemanları sıralanamaz ve indekslenemez ayrıca her bir eleman liste içerisinde sadece bir tane olabilir.
