@@ -246,9 +246,128 @@ print('(Count) Erkek elemanı var mı ? : ',myTuple.count('Erkek')) # Varsa 1 yo
 print('Index kaçıncı sırada : ',myTuple.index('Yaşlı'))
 
 myList.reverse
-
+print(myList)
 
 
 # Set, elemanları sıralanamaz ve indekslenemez ayrıca her bir eleman liste içerisinde sadece bir tane olabilir.
 
 # Dictionary, key ve value şeklinde değer alırlar. Aynı key bilgisiyle birden fazla eleman olamaz.
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(
+car.get("model")
+)
+fruits = {"apple", "banana", "cherry"}
+fruits.discard("banana")
+print(fruits)
+a = 2
+b = 5
+print("YES") if a == b else  print("NO")
+#Exmaple *******************************
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+#**************************************
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+#***************************************
+for x in range(6):
+  print(x)
+#**************************************
+def my_function():
+  print("Hello from a function")
+my_function()
+#*************************************
+def my_function1(*kids):
+  print("The youngest child is " + kids[2])
+my_function1('Kayra','222','Melike','Ali')
+#***************************************
+def my_function3(**kid):
+  print("His last name is " + kid["lname"])
+#my_function3('lname :selam','Merhaba')
+#***************************************
+  x = lambda a:a
+  print(x)
+#***************************************
+x = lambda a, b, c : a + b + c
+print((x)(5, 6, 2))
+#***************************************
+x = lambda a : a + 10
+print(x(5))
+#**************************************
+def carp(n):
+  return lambda a : a * n
+carpan = carp(2)
+print(carpan(11))
+#**************************************
+import numpy as np
+myNumpy =dir(np)
+print(dir(np))
+#*************************************
+# # class Person:
+   
+# #    def __init__ (self, firstName,lastName):
+# #       self.firstName = firstName
+# #       self.lastName = lastName
+
+# #    def __str__(self):
+# #       return f"{self.firstName} {self.lastName}"
+
+# # class Student(Person):
+   
+# #    def __init__ (self,classNumber,departmen):
+# #       self.classNumber =classNumber
+# #       self.departmen= departmen
+      
+# #    def __str__(self):
+# #        return f" {self.classNumber}{self.departmen}"
+      
+
+
+# # s1= Student()
+# # Student.fullName='Melike'
+# # Student.lastName='Tuana'
+# # Student('5/A','Kimya')
+
+# # print(s1)
+#*****************************************************************************
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def __str__(self) ->str:
+    return f"{self.firstname} {self.lastname}"
+    #print(self.firstname, self.lastname)
+
+
+
+x = Person("Kayra", "Deniz")
+print(x)
+class Student(Person):
+   def value(self) -> str:
+     print('Selam')
+   
+x = Student("Melike", "Tuana")
+print(x,x.value())
+#********************************************************************************
+def carp(n):
+  return lambda a : a * n
+
+carpan = carp(2)
+
+print(carpan(11))
+#*********************************************************************************
+      
+   
+
