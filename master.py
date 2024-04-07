@@ -368,6 +368,12 @@ carpan = carp(2)
 
 print(carpan(11))
 #*********************************************************************************
-      
+vade=20
+print("(1. gösterim) Vade sayıdı :",vade)   
+print("(2. gösterim) Vade sayıdı : " +str(vade) )
+print("(3. gösterim) Vade sayıdı : {vadesayisi}".format(vadesayisi =vade)) 
+print(f"(4. gösterim) Vade sayıdı : {vade}") 
+ 
+  
    
 
