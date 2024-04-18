@@ -374,6 +374,51 @@ print("(2. gösterim) Vade sayıdı : " +str(vade) )
 print("(3. gösterim) Vade sayıdı : {vadesayisi}".format(vadesayisi =vade)) 
 print(f"(4. gösterim) Vade sayıdı : {vade}") 
  
-  
-   
+# List -Listeler []
+print("***************** Listeler [] ****************************")
+krediler = ["İhtiyaç Kredisi","Taşıt Kredesi","Araç Kredisi"]
+print("len() ile eleman saysı :",len(krediler)) #lenght
+krediler.append("Öğrenim Kredisi")
+print(".append ile 1 eleman ekleme :",krediler)
+krediler.extend(["X Kredisi","Y Kredisi"] )
+print(".extend ile 1 den fasla eleman eklenmesi :",krediler)
+krediler.pop()
+print(".pop() ile en sonuncu elamnın silimesi",krediler)
+krediler.remove("X Kredisi")
+print(".remove('eleman değeri') eleman silinmesi",krediler)
+print("**************************** For *******************")
+for i in range(10):
+  print(i)
 
+for i in range(3,10):
+  print("3' ten başla 9'a kadar yaz:",i)
+for i in range(0,51,5):
+  print("0'dan başla 50'ye kadar 5'er 5'er yaz:",i)
+
+for kredi in krediler:
+  print(kredi)
+
+for i in range(len(krediler)):
+  print(krediler[i])
+print("**********Reverse tersten yazma***********")
+for i in range((len(krediler)-1),-1,-1) :
+  print(krediler[i])
+
+#fonksiyonlar defination define tanımlama:
+
+def address():
+  address="İzmit/Kocaeli"
+  print("Banka Adresi:"+address)
+
+address()
+address()
+
+def aritmeticMean(number1,number2,number3):
+    print(f"Ortalama : {(number1+number2+number3)/3}")
+
+   
+aritmeticMean(10,45,90)
+
+def calculateAndReturn(price,discount):
+  return price-discount
+print(calculateAndReturn(130,45))
