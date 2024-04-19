@@ -34,23 +34,25 @@ human2.run()
 human2.walk()
 
 class productDal:
-    def __init__(self,name) :
-        self.name=name
+    def __init__(self,mname,brand) :
+        self.name=mname
+        self.brand=brand
     def __str__(self) -> str:
-        return f"STR fonksiyounudan geri dönen değer : {self.name}."      
+        return f"STR fonksiyounudan geri dönen değer : {self.name} and {self.brand}."      
     def  Add(self):
-        print(f"{self.name} added.")
+        print(f"{self.name}and {self.brand} added.")
     def Delete(self):
-        print(f"{self.name} deleted.")
+        print(f"{self.name} and {self.brand} deleted.")
     def Update(self):
-        print(f"{self.name} updated.")
+        print(f"{self.name} and {self.brand} updated.")
 
-productDal1= productDal("Computer")
+productDal1= productDal("Computer","Acer")
 productDal1.Add()
 productDal1.Update()
 
-productDal2= productDal("Printer")
+productDal2= productDal("Printer","OKI")
 productDal2.Delete()
-
+productDal1.brand="Selenay"
+productDal1.name="nafaka"
 print(productDal2)
 print(productDal1)
