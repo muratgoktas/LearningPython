@@ -27,6 +27,12 @@ class StudentDal:
             students[myIndex]=([fValue.title(),lValue.upper()])
         else:
             print(f"{firstName} ve {lastName}- böyle bir Kayıt yoktur.")
+    def GetByLastName(self,lastName):
+        i = 0
+        while len(students) < i:
+          if(lastName in students[0:2][1]):
+             print(students.firstName+" "+students.lastName )
+        i+=1
             
 
 
@@ -64,3 +70,4 @@ for student in students:
 #print(students[2][0])
 studentDal.Update("Semra","GÖKTAŞ")
 print(students)
+print(studentDal.GetByLastName("GÖKTAŞ"))
